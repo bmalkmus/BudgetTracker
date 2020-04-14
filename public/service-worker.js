@@ -1,7 +1,7 @@
 const FILES_TO_CACHE = [
     "/",
     "/index.html",
-    "/styles.css",
+    "/assets/css/styles.css",
     "/dist/bundle.js"
 ];
 
@@ -16,7 +16,7 @@ self.addEventListener("install", event => {
   );
 });
 
-// The activate handler takes care of cleaning up old caches.
+
 self.addEventListener("activate", event => {
   const currentCaches = [PRECACHE, RUNTIME];
   event.waitUntil(

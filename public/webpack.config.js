@@ -2,26 +2,26 @@ const webpackManifest = require("webpack-pwa-manifest");
 const path = require("path");
 
 const config = {
-    entry: "index.js",
+    entry: "./index.js",
     output: {
         path: __dirname + "/dist",
         filename: "bundle.js"
-    },
+      },
     mode: "development",
     module: {
-        rules: [
-            {
-                test: /\.js$/,
-                exclude: /node_modules/,
-                use : {
-                    loader: "babel-loader",
-                    options: {
-                        presets: ["@babel/preset-env"]
-                    }
+    rules: [
+        {
+            test: /\.js$/,
+            exclude: /node_modules/,
+            use: {
+                loader: "babel-loader",
+                options: {
+                    presets: ["@babel/preset-env"]
                 }
             }
-        ]
-    },
+        }
+    ]
+},
     plugins: [
         new webpackManifest ({
             name: "Budget App",
