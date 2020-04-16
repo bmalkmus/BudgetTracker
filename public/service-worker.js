@@ -1,8 +1,10 @@
 const FILES_TO_CACHE = [
     "/",
     "/index.html",
-    "/assets/css/styles.css",
-    "/dist/bundle.js"
+    "/styles.css",
+    "/dist/online.bundle.js",
+    "/dist/offline.bundle.js",
+    "/icons/icon-192x192.png"
 ];
 
 const PRECACHE = "precacheBudget-v1";

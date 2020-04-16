@@ -1,3 +1,5 @@
+import {saveRecord} from "./indexedDB.js";
+
 let transactions = [];
 let myChart;
 
@@ -135,6 +137,7 @@ function sendTransaction(isAdding) {
     }
   })
   .catch(err => {
+    console.log("Yo, no internet, but don't worry, I gotcha!")
     // fetch failed, so save in indexed db
     saveRecord(transaction);
 

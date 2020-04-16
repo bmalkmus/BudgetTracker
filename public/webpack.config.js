@@ -2,10 +2,13 @@ const webpackManifest = require("webpack-pwa-manifest");
 const path = require("path");
 
 const config = {
-    entry: "./index.js",
+    entry: {
+        online: "./index.js",
+        offline: "./indexedDB.js"
+    },
     output: {
         path: __dirname + "/dist",
-        filename: "bundle.js"
+        filename: "[name].bundle.js"
       },
     mode: "development",
     module: {
