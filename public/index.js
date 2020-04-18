@@ -1,7 +1,8 @@
-import {saveRecord} from "./indexedDB.js";
-
+import {saveRecord, CheckINDEX} from "./indexedDB.js";
 let transactions = [];
 let myChart;
+
+CheckINDEX();
 
 fetch("/api/transaction")
   .then(response => {
@@ -154,3 +155,5 @@ document.querySelector("#add-btn").onclick = function() {
 document.querySelector("#sub-btn").onclick = function() {
   sendTransaction(false);
 };
+
+window.addEventListener("online", CheckINDEX);

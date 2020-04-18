@@ -4,7 +4,6 @@ const path = require("path");
 const config = {
     entry: {
         online: "./index.js",
-        offline: "./indexedDB.js"
     },
     output: {
         path: __dirname + "/dist",
