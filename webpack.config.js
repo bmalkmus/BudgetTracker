@@ -3,10 +3,10 @@ const path = require("path");
 
 const config = {
     entry: {
-        online: "./index.js",
+        online: "./public/index.js",
     },
     output: {
-        path: __dirname + "/dist",
+        path: __dirname + "/public/dist",
         filename: "[name].bundle.js"
       },
     mode: "production",
@@ -34,7 +34,7 @@ const config = {
             "theme-color": "#ffffff",
             start_url: "/",
             icons: [{
-                src: path.resolve("./icons/icon-192x192.png"),
+                src: path.resolve("./public/icons/icon-192x192.png"),
                 sizes: [96, 128, 192, 384, 512],
                 destination: path.join ("assets", "icons")
             }]
